@@ -28,82 +28,87 @@ unitx=1
 logx=0
 logy=0
 hilight_wave=-1}
-N -798 113 -798 133 {lab=GND}
-N -798 33 -798 53 {lab=VDD}
-N -817 -198 -817 -178 {lab=GND}
-N -767 -104 -767 -84 {lab=GND}
-N -817 -378 -817 -258 {lab=up}
-N -817 -378 -615 -378 {lab=up}
-N -767 -358 -767 -164 {lab=down}
-N -767 -358 -615 -358 {lab=down}
-N -459 -368 -362 -368 {lab=vout_cp}
-N -308.5 -299 -308.5 -278 {lab=GND}
-N -563 -452 -563 -426 {lab=bias_p}
-N -513 -458 -513 -425 {lab=VDD}
-N -257 -368 -229 -368 {lab=vout}
-N -269 -74 -269 -61 {lab=VDD}
-N -283 -61 -269 -61 {lab=VDD}
-N -283 -61 -283 -50 {lab=VDD}
-N -253 -61 -253 -50 {lab=VDD}
-N -269 -61 -253 -61 {lab=VDD}
-N -283 110 -283 117 {lab=GND}
-N -267 117 -253 117 {lab=GND}
-N -253 109 -253 117 {lab=GND}
-N -267 117 -267 126 {lab=GND}
-N -283 117 -267 117 {lab=GND}
-N -551 88 -551 108 {lab=GND}
-N -493 117 -493 137 {lab=GND}
-N -176 50 -153 50 {lab=bias_p}
-N -551 20 -470 20 {lab=#net1}
-N -551 20 -551 31 {lab=#net1}
-N -493 40 -493 60 {lab=#net2}
-N -493 40 -468 40 {lab=#net2}
-N -176 10 -155 10 {lab=bias_n}
-N -563 -303 -563 -281 {lab=bias_n}
-N -513 -301 -513 -281 {lab=GND}
-C {vsource.sym} -798 83 0 0 {name=V1 value=1.2 savecurrent=false}
-C {gnd.sym} -798 133 0 0 {name=l1 lab=GND}
-C {vdd.sym} -798 33 0 0 {name=l2 lab=VDD}
-C {gnd.sym} -513 -284 0 0 {name=l3 lab=GND}
-C {vdd.sym} -513 -455 0 0 {name=l4 lab=VDD}
-C {vsource.sym} -817 -228 0 0 {name=V4 value="PULSE(0 1.2 .2NS .2NS .2NS 2NS 10NS)" savecurrent=false}
-C {gnd.sym} -817 -178 0 0 {name=l7 lab=GND}
-C {vsource.sym} -767 -134 0 0 {name=V5 value="PULSE(0 1.2 .2NS .2NS .2NS 0.02NS 10NS)" savecurrent=false}
-C {gnd.sym} -767 -84 0 0 {name=l8 lab=GND}
-C {lab_wire.sym} -563 -452 1 0 {name=p3 sig_type=std_logic lab=bias_p}
-C {lab_wire.sym} -563 -282 3 0 {name=p4 sig_type=std_logic lab=bias_n}
-C {devices/code_shown.sym} 454 81 0 0 {name=NGSPICE only_toplevel=true 
+N -820 140 -820 160 {lab=GND}
+N -820 60 -820 80 {lab=VDD}
+N -820 -200 -820 -180 {lab=GND}
+N -720 -120 -720 -100 {lab=GND}
+N -820 -380 -820 -260 {lab=up}
+N -820 -380 -620 -380 {lab=up}
+N -720 -360 -720 -180 {lab=down}
+N -720 -360 -620 -360 {lab=down}
+N -460 -370 -360 -370 {lab=vout_cp}
+N -310 -300 -310 -280 {lab=GND}
+N -560 -460 -560 -440 {lab=bias_p}
+N -510 -470 -510 -440 {lab=VDD}
+N -250 -370 -220 -370 {lab=vout}
+N -440 -30 -430 -30 {lab=VDD}
+N -440 -30 -440 -20 {lab=VDD}
+N -410 -30 -410 -20 {lab=VDD}
+N -430 -30 -410 -30 {lab=VDD}
+N -440 140 -440 150 {lab=GND}
+N -430 150 -410 150 {lab=GND}
+N -410 140 -410 150 {lab=GND}
+N -430 150 -430 170 {lab=GND}
+N -440 150 -430 150 {lab=GND}
+N -730 120 -730 140 {lab=GND}
+N -660 150 -660 170 {lab=GND}
+N -330 80 -300 80 {lab=bias_p}
+N -730 50 -630 50 {lab=#net1}
+N -730 50 -730 60 {lab=#net1}
+N -660 70 -660 90 {lab=#net2}
+N -660 70 -630 70 {lab=#net2}
+N -560 -300 -560 -280 {lab=bias_n}
+N -510 -300 -510 -280 {lab=GND}
+N -430 -50 -430 -30 {lab=VDD}
+N -330 40 -300 40 {lab=bias_n}
+C {vsource.sym} -820 110 0 0 {name=V1 value=1.2 savecurrent=false}
+C {gnd.sym} -820 160 0 0 {name=l1 lab=GND}
+C {vdd.sym} -820 60 0 0 {name=l2 lab=VDD}
+C {gnd.sym} -510 -280 0 0 {name=l3 lab=GND}
+C {vdd.sym} -510 -470 0 0 {name=l4 lab=VDD}
+C {vsource.sym} -820 -230 0 0 {name=V4 value="PULSE(0 1.2 .2NS .2NS .2NS 4NS 10NS)" savecurrent=false}
+C {gnd.sym} -820 -180 0 0 {name=l7 lab=GND}
+C {vsource.sym} -720 -150 0 0 {name=V5 value="PULSE(0 1.2 .2NS .2NS .2NS 0.02NS 10NS)" savecurrent=false}
+C {gnd.sym} -720 -100 0 0 {name=l8 lab=GND}
+C {lab_wire.sym} -560 -460 3 1 {name=p3 sig_type=std_logic lab=bias_p}
+C {lab_wire.sym} -560 -280 3 0 {name=p4 sig_type=std_logic lab=bias_n}
+C {devices/code_shown.sym} 314 81 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-.tran 1n 100n uic
-.save all
+
+.control
+save v(up) v(down) v(vout_cp) v(vout)
+tran 1n 300n uic
+
+write TRAN_CHRG_PUMP_TB.raw
+.endc
 "}
-C {devices/code_shown.sym} -67 48 0 0 {name=TRANS_MODEL only_toplevel=true
+C {devices/code_shown.sym} -177 48 0 0 {name=TRANS_MODEL only_toplevel=true
 format="tcleval( @value )"
 value=".lib cornerMOSlv.lib mos_tt
 "}
-C {lab_wire.sym} -635 -378 0 0 {name=p6 sig_type=std_logic lab=up}
-C {lab_wire.sym} -635 -358 0 0 {name=p7 sig_type=std_logic lab=down}
-C {devices/code_shown.sym} -67 98 0 0 {name=RES_MODEL only_toplevel=true
+C {lab_wire.sym} -640 -380 0 0 {name=p6 sig_type=std_logic lab=up}
+C {lab_wire.sym} -640 -360 0 0 {name=p7 sig_type=std_logic lab=down}
+C {devices/code_shown.sym} -197 148 0 0 {name=RES_MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerRES.lib res_typ_stat
 "}
-C {lab_pin.sym} -425 -368 3 0 {name=p5 sig_type=std_logic lab=vout_cp}
-C {charge_pump.sym} -553 -368 0 0 {name=x2}
-C {launcher.sym} 502 7 0 0 {name=h5
+C {lab_pin.sym} -410 -370 3 0 {name=p5 sig_type=std_logic lab=vout_cp}
+C {CHRG_PUMP.sym} -550 -370 0 0 {name=x2}
+C {launcher.sym} 342 7 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/charge_pump_tb.raw tran"
+tclcommand="xschem raw_read $netlist_dir/TRAN_CHRG_PUMP_TB.raw tran"
 }
-C {gnd.sym} -308.5 -280 0 0 {name=l9 lab=GND}
-C {loop_filter.sym} -308.5 -338 0 0 {name=x1}
-C {lab_pin.sym} -229.5 -368 3 0 {name=p1 sig_type=std_logic lab=vout}
-C {Bias_gen.sym} -323 30 0 0 {name=x3}
-C {gnd.sym} -267 126 0 0 {name=l13 lab=GND}
-C {vsource.sym} -551 58 0 0 {name=V7 value=1.2 savecurrent=false}
-C {gnd.sym} -551 108 0 0 {name=l14 lab=GND}
-C {vsource.sym} -493 87 0 0 {name=V8 value=0 savecurrent=false}
-C {gnd.sym} -493 137 0 0 {name=l15 lab=GND}
-C {lab_pin.sym} -156 10 2 0 {name=p2 sig_type=std_logic lab=bias_n}
-C {lab_pin.sym} -154 50 2 0 {name=p10 sig_type=std_logic lab=bias_p}
-C {vdd.sym} -269 -70 0 0 {name=l5 lab=VDD}
+C {gnd.sym} -310 -280 0 0 {name=l9 lab=GND}
+C {LOOP_FILTER.sym} -310 -340 0 0 {name=x1}
+C {lab_pin.sym} -220 -370 3 0 {name=p1 sig_type=std_logic lab=vout}
+C {BIAS_GEN.sym} -480 60 0 0 {name=x3}
+C {gnd.sym} -430 170 0 0 {name=l13 lab=GND}
+C {vsource.sym} -730 90 0 0 {name=V7 value=1.2 savecurrent=false}
+C {gnd.sym} -730 140 0 0 {name=l14 lab=GND}
+C {vsource.sym} -660 120 0 0 {name=V8 value=0 savecurrent=false}
+C {gnd.sym} -660 170 0 0 {name=l15 lab=GND}
+C {lab_pin.sym} -300 40 2 0 {name=p2 sig_type=std_logic lab=bias_n}
+C {lab_pin.sym} -300 80 2 0 {name=p10 sig_type=std_logic lab=bias_p}
+C {vdd.sym} -430 -50 0 0 {name=l5 lab=VDD}
