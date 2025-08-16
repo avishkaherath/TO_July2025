@@ -166,14 +166,13 @@ value="
 Vvss VSS 0 0
 
 .control
-pre_osdi ./psp103_nqs.osdi
-save all 
+save v(clk_in) v(clk_out) v(div) v(cout) 
 tran 50p 50n
 
-write tran_freq_div_cell.raw
+write TRAN_FREQ_DIV_CELL.raw
 .endc
 "}
 C {devices/launcher.sym} 170 -630 0 0 {name=h1
 descr="load waves Ctrl + left click" 
-tclcommand="xschem raw_read $netlist_dir/tran_freq_div_cell.raw tran"}
+tclcommand="xschem raw_read $netlist_dir/TRAN_FREQ_DIV_CELL.raw tran"}
 C {lab_pin.sym} 400 -260 2 0 {name=p5 sig_type=std_logic lab=VDD}
