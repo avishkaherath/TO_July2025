@@ -188,26 +188,22 @@ N -1180 -400 -1180 -130 {lab=B0}
 C {vsource.sym} -1730 20 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -1730 70 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1730 -30 0 0 {name=l2 lab=VDD}
-C {devices/code_shown.sym} -929 -406 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -929 -386 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
 .options klu
 .options method=gear gmin=1e-10
 
-*RPUP x1.vco_wob_0.vctl VDD 1e5
-*RPDN x1.vco_wob_0.vctl VSS 1e5
-
 .control
 save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl) v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK)
-tran 0.1n 10u
+tran 0.1n 1u
 
-write tran_pll_3bitDiv_tb_pex_fmax.raw
+write TRAN_PLL_3BIT_DIV_PEX.raw
 .endc
-
 "}
 C {launcher.sym} -443 161 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/tran_pll_3bitDiv_tb_pex.raw tran"
+tclcommand="xschem raw_read $netlist_dir/TRAN_PLL_3BIT_DIV_PEX.raw tran"
 }
 C {vsource.sym} -1560 20 0 0 {name=V2 value="PULSE(0 1.2 50n 1n 1n 50n 100n)" savecurrent=false}
 C {gnd.sym} -1560 70 0 0 {name=l10 lab=GND}
@@ -226,17 +222,17 @@ C {noconn.sym} -970 -80 3 1 {name=l8}
 C {devices/code_shown.sym} -1560 180 0 0 {name=PARAMS_A only_toplevel=true 
 value="
 .param A0 = 1.2
-.param A1 = 1.2
+.param A1 = 0
 .param A2 = 0
 "}
-C {devices/code_shown.sym} -520 -180 0 0 {name=MODEL
+C {devices/code_shown.sym} -760 -100 0 0 {name=MODEL
 only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerMOSlv.lib mos_tt
 .lib $::SG13G2_MODELS/cornerRES.lib res_typ_stat
 .lib $::SG13G2_MODELS/cornerCAP.lib cap_typ
-.include ../../pex/pll_3bitDiv__pll_3bitDiv/magic_RC/pll_3bitDiv.pex.spice
+.include ../../kpex/magic_RC/pll_3bitDiv.pex.spice
 "
 place=header}
 C {vsource.sym} -1040 170 0 0 {name=Va2 value="dc \{A2\}" savecurrent=false}
@@ -291,13 +287,6 @@ C {code.sym} -720 110 0 0 {name=NODESET only_toplevel=false value=
 "
 .ic V(VSS) = 0
 .ic V(VDD) = 1.2
-*.ic V(B2) = 0
-*.ic V(B1) = 0
-*.ic V(B0) = 1.2
-*.ic V(A2) = 0
-*.ic V(A1) = 0
-*.ic V(A0) = 1.2
-*.ic V(CLK_IN) = 0
 .ic V(x1.vco_wob_0.vctl) = 0.6
 *.ic V(x1.3bit_freq_divider_1.dff_nclk_0.nCLK) = 1.2
 *.ic V(x1.3bit_freq_divider_0.dff_nclk_0.nCLK) = 1.2

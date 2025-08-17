@@ -1,6 +1,6 @@
 * NGSPICE file created from pll_3bitDiv.ext - technology: ihp-sg13g2
 
-.subckt pll_3bitDiv CLK_IN CLK_OUT Y0 Y2 Y1 VDD VSS nEN X1 X2 X0
+.subckt PLL_3BIT_DIV_PEX CLK_IN CLK_OUT Y0 Y2 Y1 VDD VSS nEN X1 X2 X0
 X0 VDD a_53968_20434# a_53899_20488# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.13u
 X1 VSS 3bit_freq_divider_1.dff_nclk_0.nCLK a_61488_20220# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=50.4f ps=0.66u w=0.42u l=0.13u
 X2 a_62119_20605# a_61691_20534# a_61394_20220# VSS sg13_lv_nmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
