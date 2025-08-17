@@ -80,7 +80,7 @@ value="
 save v(up) v(down) v(vout_cp) v(vout)
 tran 1n 300n uic
 
-write TRAN_CHRG_PUMP_TB.raw
+write TRAN_CHRG_PUMP.raw
 .endc
 "}
 C {devices/code_shown.sym} -177 48 0 0 {name=TRANS_MODEL only_toplevel=true
@@ -98,7 +98,7 @@ C {lab_pin.sym} -410 -370 3 0 {name=p5 sig_type=std_logic lab=vout_cp}
 C {CHRG_PUMP.sym} -550 -370 0 0 {name=x2}
 C {launcher.sym} 342 7 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/TRAN_CHRG_PUMP_TB.raw tran"
+tclcommand="xschem raw_read $netlist_dir/TRAN_CHRG_PUMP.raw tran"
 }
 C {gnd.sym} -310 -280 0 0 {name=l9 lab=GND}
 C {LOOP_FILTER.sym} -310 -340 0 0 {name=x1}

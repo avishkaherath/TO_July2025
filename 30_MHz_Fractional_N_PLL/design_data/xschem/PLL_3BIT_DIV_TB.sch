@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=0
-y2=0.01
+y1=5.4e-08
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1e-06
+x1=0
+x2=9.3433624e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -80 -20 720 380 {flags=graph
-y1=0
-y2=0.01
+y1=0.59
+y2=0.7
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1e-06
+x1=0
+x2=9.3433624e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,15 +47,15 @@ logx=0
 logy=0
 }
 B 2 -1860 -880 -1060 -480 {flags=graph
-y1=0
-y2=0.01
+y1=-0.01
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1e-06
+x1=0
+x2=9.3433624e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ logx=0
 logy=0
 }
 B 2 -1000 -880 -200 -480 {flags=graph
-y1=0
-y2=0.01
+y1=-0.0006
+y2=0.00043
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1e-06
+x1=0
+x2=9.3433624e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -96,8 +96,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1e-06
+x1=0
+x2=9.3433624e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -148,25 +148,24 @@ C {gnd.sym} -1830 70 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1830 -30 0 0 {name=l2 lab=VDD}
 C {devices/code_shown.sym} -879 -356 0 0 {name=NGSPICE only_toplevel=true 
 value="
-.include pll_3bitDiv.pex.spice
 .param temp=27
 .options method=gear
 .options gmin=1e-10
 
 .control
-save all
+save v(x1.up) v(x1.dn) v(clk_in) v(clk_out) v(x1.vctrl)
  
-tran 1n 1u uic
+tran 1n 2u
 
-write tran_pll_3bitDiv_tb_post.raw
+write TRAN_PLL_3BIT_DIV.raw
 .endc
 
 "}
-C {launcher.sym} -333 -139 0 0 {name=h5
+C {launcher.sym} -363 -119 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/tran_pll_3bitDiv_tb_post.raw tran"
+tclcommand="xschem raw_read $netlist_dir/TRAN_PLL_3BIT_DIV.raw tran"
 }
-C {vsource.sym} -1660 20 0 0 {name=V2 value="PULSE(0 1.2 0.2n 5n 5n 50n 100n)" savecurrent=false}
+C {vsource.sym} -1660 20 0 0 {name=V2 value="PULSE(0 1.2 50n 5n 5n 50n 100n)" savecurrent=false}
 C {gnd.sym} -1660 70 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1660 -70 0 0 {name=p15 sig_type=std_logic lab=CLK_IN}
 C {vdd.sym} -1180 -160 0 0 {name=l3 lab=VDD}
@@ -186,7 +185,7 @@ value="
 .param A1 = 0
 .param A2 = 0
 "}
-C {devices/code_shown.sym} -940 130 0 0 {name=MODEL
+C {devices/code_shown.sym} -940 170 0 0 {name=MODEL
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -215,3 +214,10 @@ value="
 .param B2 = 0
 "}
 C {PLL_3BIT_DIV.sym} -1230 -50 0 0 {name=x1}
+C {code.sym} -670 -30 0 0 {name=NODESET only_toplevel=false value=
+"
+.ic V(VDD) = 1.2
+.ic V(x1.up) = 0
+.ic V(x1.dn) = 0
+.ic V(x1.vctrl) = 0.6
+"}

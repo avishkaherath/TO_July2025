@@ -46,7 +46,7 @@ value="
 save v(vout)
 tran 100p 200n
 
-write TRAN_11STG_VCO_TB.raw
+write TRAN_11STG_VCO.raw
 .endc
 "}
 C {vsource.sym} 770 -40 0 0 {name=VPWR value=1.2 savecurrent=false}

@@ -125,7 +125,7 @@ value="
 save v(clk_in) v(ref) v(up) v(down) 
 tran 50p 50n
 
-write TRAN_PFD_TB.raw
+write TRAN_PFD.raw
 .endc
 "}
 C {PFD.sym} 0 290 0 0 {name=x1}
