@@ -24,10 +24,11 @@ x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 PLL_3BIT_DIV_PEX
 .options method=gear gmin=1e-10
 
 .control
-save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl) v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK)
-tran 0.1n 1u
+save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl)
+save v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK) i(v1) v(vdd)
 
-write TRAN_PLL_3BIT_DIV_PEX.raw
+tran 0.1n 6u
+write TRAN_PLL_3BIT_DIV_PEX_FTYP.raw
 .endc
 
 

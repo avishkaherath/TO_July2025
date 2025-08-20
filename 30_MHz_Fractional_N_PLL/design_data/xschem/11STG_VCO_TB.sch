@@ -44,7 +44,7 @@ value="
 .param temp=27
 .control
 save v(vout)
-tran 100p 200n
+tran 100p 500n
 
 write TRAN_11STG_VCO.raw
 .endc

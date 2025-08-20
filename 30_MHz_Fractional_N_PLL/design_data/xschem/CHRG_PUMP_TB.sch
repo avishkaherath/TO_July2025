@@ -78,7 +78,7 @@ value="
 
 .control
 save v(up) v(down) v(vout_cp) v(vout)
-tran 1n 300n uic
+tran 1n 500n uic
 
 write TRAN_CHRG_PUMP.raw
 .endc

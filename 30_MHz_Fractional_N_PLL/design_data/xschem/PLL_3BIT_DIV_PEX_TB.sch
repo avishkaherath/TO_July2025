@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 B 2 590 -880 1390 -480 {flags=graph
-y1=-0.0038
+y1=1.1
 y2=1.3
 ypos1=0
 ypos2=2
@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-06
+x2=1e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,7 +26,7 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -60 1390 340 {flags=graph
-y1=-0.0027
+y1=4.4e-05
 y2=1.3
 ypos1=0
 ypos2=2
@@ -34,7 +34,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-06
+x2=1e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -55,7 +55,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-06
+x2=1e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,7 +76,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-06
+x2=1e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,7 +97,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-06
+x2=1e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -110,15 +110,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -470 1390 -70 {flags=graph
-y1=0.57
-y2=0.68
+y1=0.58
+y2=0.6
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-06
+x2=1e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -131,7 +131,7 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -220 -60 580 340 {flags=graph
-y1=-0.011
+y1=1.1
 y2=1.3
 ypos1=0
 ypos2=2
@@ -139,13 +139,34 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-06
+x2=1e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node=x1.PFD_0.VCO_CLK
 color=10
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 -220 -470 580 -70 {flags=graph
+y1=1.8e-06
+y2=0.00077
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node= "supply power;i(v1) vdd * -1 *"
+color=21
 dataset=-1
 unitx=1
 logx=0
@@ -188,17 +209,18 @@ N -1180 -400 -1180 -130 {lab=B0}
 C {vsource.sym} -1730 20 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -1730 70 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1730 -30 0 0 {name=l2 lab=VDD}
-C {devices/code_shown.sym} -929 -386 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -979 -396 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
 .options klu
 .options method=gear gmin=1e-10
 
 .control
-save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl) v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK)
-tran 0.1n 1u
+save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl)
+save v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK) i(v1) v(vdd)
 
-write TRAN_PLL_3BIT_DIV_PEX.raw
+tran 0.1n 6u
+write TRAN_PLL_3BIT_DIV_PEX_FTYP.raw
 .endc
 "}
 C {launcher.sym} -443 161 0 0 {name=h5

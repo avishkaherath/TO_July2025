@@ -1,5 +1,5 @@
-Design Data and Design Process Description
-##########################################
+30 MHz Fractional-N PLL Design Data and Design Process Description
+##################################################################
 
 The design is primarily implements a charge-pump (CP) based **Type-II Phase-Locked Loop (PLL)** designed to generate programmable output frequencies from a stable ``10 MHz`` reference input. The architecture uses a Voltage-Controlled Oscillator (VCO) together with two 3-bit programmable Frequency Dividers (FDs) to achieve a tunable output frequency.
 
@@ -22,6 +22,13 @@ By configuring **M** and **N** via six digital I/O control pads (3 bits each), t
 :math:`f_out = (M / N) x f_ref`
 
 Since both ``M`` and ``N`` can be varied between ``1 and 7``, the **theoretical frequency range** spans from ``1.428 MHz to 70 MHz``, based on the 3-bit divider limits. However, due to VCO constraints, the **practical output frequency range** is limited to approximately ``1.428 MHz to 30 MHz``. This design demonstrates a compact, digitally controlled fractional frequency synthesizer suitable for clock generation and frequency scaling applications.
+
+Original Project Repository
+###########################
+
+This project repository contains the only the important design files and simulation results for the 30 MHz Fractional-N PLL. All the information regarding the draft designs and simulations can be found at the original project repository.
+
+- Link - https://github.com/SkillSurf/cmos-pll-ihp-sg13g2
 
 Circuit Design
 ##############
@@ -126,7 +133,7 @@ Output Waveform of the VCO
 VCO Output Waveform at Control Voltage = 1V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/.png
+.. image:: _static/VCO_RANGE.png
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -134,7 +141,7 @@ VCO Output Waveform at Control Voltage = 1V
 VCO Output Frequency Spectrum at Control Voltage = 1V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/.png
+.. image:: _static/VCO_OUT_SPECTRUM.png
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -142,7 +149,7 @@ VCO Output Frequency Spectrum at Control Voltage = 1V
 VCO Oscillation Frequency vs Control Voltage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/.png
+.. image:: _static/VCO_RANGE.png
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -150,7 +157,7 @@ VCO Oscillation Frequency vs Control Voltage
 Operation of the Charge Pump
 ----------------------------
 
-.. image:: _static/.png
+.. image:: _static/CHRG_PUMP_OUT.png
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -158,7 +165,7 @@ Operation of the Charge Pump
 Frequency Divider Output Waveform for a Divider Ratio = 7
 ---------------------------------------------------------
 
-.. image:: _static/.png
+.. image:: _static/3BIT_FREQ_DIV_OUT.png
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -247,7 +254,7 @@ Layout Information
    * - **Layout**
      - 400
      - 400
-     - -
+     - N/A
      - 160,000
      - all
    * - **Pads**
@@ -314,5 +321,5 @@ References
 
 The following open-source PLL designs were referred to during the development of this project:
 
-- [tt08-tiny-pll](https://github.com/LegumeEmittingDiode/tt08-tiny-pll)
-- [avsdpll_1v8](https://github.com/lakshmi-sathi/avsdpll_1v8)
+- tt08-tiny-pll - https://github.com/LegumeEmittingDiode/tt08-tiny-pll
+- avsdpll_1v8 - https://github.com/lakshmi-sathi/avsdpll_1v8
