@@ -1,6 +1,5 @@
-Validation  of the Amazing Design
+Validation of the Design
 #################################
 
 
-Document the measurement results here.
-
+Measurement results await.

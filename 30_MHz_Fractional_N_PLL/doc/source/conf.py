@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Amazing Design'
-copyright = '2024, IHP Open PDK'
-author = 'Amazing Design Authors'
+project = '30 MHz Fractional-N PLL'
+copyright = '2025, IHP Open PDK'
+author = 'Avishka Herath, Hansa Marasinghe, Manimohan Thiriloganathan, Nilasi Methsarani, Upeksha Dilhara, Yasiru Amarasinghe, Nimesh Kavinda, Kithmin Wickremasinghe (Instructor), Dr. Subramaniam Thayaparan (Supervisor)'
 
 release = '0.1'
 version = '0.1.0'
