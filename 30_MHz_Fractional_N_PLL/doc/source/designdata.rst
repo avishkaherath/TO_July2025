@@ -29,7 +29,7 @@ Circuit Design
 Phase-Locked Loop (PLL)
 -----------------------
 
-.. image:: _static/.PNG
+.. image:: _static/PLL_3BIT_DIV.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -37,7 +37,7 @@ Phase-Locked Loop (PLL)
 Phase-Frequency Detector (PFD)
 ------------------------------
 
-.. image:: _static/.PNG
+.. image:: _static/PFD.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -45,7 +45,7 @@ Phase-Frequency Detector (PFD)
 Charge Pump (CP)
 ----------------
 
-.. image:: _static/.PNG
+.. image:: _static/CHRG_PUMP.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -53,7 +53,7 @@ Charge Pump (CP)
 Loop Filter
 -----------
 
-.. image:: _static/.PNG
+.. image:: _static/LOOP_FILTER.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -61,7 +61,7 @@ Loop Filter
 Bias Generator
 --------------
 
-.. image:: _static/.PNG
+.. image:: _static/BIAS_GEN.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -72,7 +72,7 @@ Voltage-Controlled Oscillator (VCO)
 Inverter for VCO
 ~~~~~~~~~~~~~~~
 
-.. image:: _static/.PNG
+.. image:: _static/VCO_INV.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -80,7 +80,7 @@ Inverter for VCO
 11-Stage Ring VCO
 ~~~~~~~~~~~~~~~~~
 
-.. image:: _static/.PNG
+.. image:: _static/11STG_VCO.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -88,7 +88,7 @@ Inverter for VCO
 Frequency Divider (FD)
 ----------------------
 
-.. image:: _static/.PNG
+.. image:: _static/3BIT_FREQ_DIV.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -96,7 +96,7 @@ Frequency Divider (FD)
 Frequency Divider Cell
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/.PNG
+.. image:: _static/FREQ_DIV_CELL.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -104,7 +104,7 @@ Frequency Divider Cell
 Half Adder for Divider
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/.PNG
+.. image:: _static/HALF_ADD.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -112,7 +112,7 @@ Half Adder for Divider
 DFF with Inverterd CLK for Divider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/.PNG
+.. image:: _static/DFF_nCLK.PNG
     :align: center
     :alt: IHP Logo Image.
     :width: 800

@@ -197,14 +197,14 @@ C {lab_pin.sym} -440 -110 0 0 {name=p21 sig_type=std_logic lab=kick}
 C {lab_pin.sym} 260 -330 0 0 {name=p22 sig_type=std_logic lab=res_bot}
 C {lab_pin.sym} 260 -600 2 0 {name=p23 sig_type=std_logic lab=VPWR}
 C {lab_pin.sym} 260 340 2 0 {name=p24 sig_type=std_logic lab=VGND}
-C {ipin.sym} -1040 -120 0 0 {name=p25 lab=en}
-C {opin.sym} -960 -120 0 0 {name=p27 lab=bias_n}
-C {iopin.sym} -1020 -180 0 0 {name=p28 lab=VNB}
-C {iopin.sym} -1020 -200 0 0 {name=p29 lab=VGND}
-C {iopin.sym} -1020 -220 0 0 {name=p30 lab=VPB}
-C {iopin.sym} -1020 -240 0 0 {name=p31 lab=VPWR}
-C {ipin.sym} -1040 -100 0 0 {name=p26 lab=enb}
-C {opin.sym} -960 -100 0 0 {name=p32 lab=bias_p}
+C {ipin.sym} -840 -140 0 0 {name=p25 lab=en}
+C {opin.sym} -860 -220 0 0 {name=p27 lab=bias_n}
+C {iopin.sym} -860 -280 0 0 {name=p28 lab=VNB}
+C {iopin.sym} -860 -300 0 0 {name=p29 lab=VGND}
+C {iopin.sym} -860 -320 0 0 {name=p30 lab=VPB}
+C {iopin.sym} -860 -340 0 0 {name=p31 lab=VPWR}
+C {ipin.sym} -840 -120 0 0 {name=p26 lab=enb}
+C {opin.sym} -860 -200 0 0 {name=p32 lab=bias_p}
 C {sg13g2_pr/rhigh.sym} 260 -490 0 0 {name=R1
 w=1.0e-6
 l=12.0e-6
