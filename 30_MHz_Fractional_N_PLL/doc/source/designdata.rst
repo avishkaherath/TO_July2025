@@ -298,7 +298,7 @@ Simulation of a Division Ratio of 1/7 (M = 1 and N = 7)
 
 .. image:: _static/.png
     :align: center
-    :alt: IHP Logo Image.
+    :alt: Image TBA.
     :width: 800
 
 Simulation of a Division Ratio of 3 (M = 3 and N = 1)
@@ -306,7 +306,7 @@ Simulation of a Division Ratio of 3 (M = 3 and N = 1)
 
 .. image:: _static/.png
     :align: center
-    :alt: IHP Logo Image.
+    :alt: Image TBA.
     :width: 800
 
 Original Project Repository
