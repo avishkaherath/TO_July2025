@@ -144,26 +144,66 @@ Layout Design
 Charge Pump Layout
 ------------------
 
+.. image:: _static/LAYOUT_CHRG_PUMP.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 Loop Filter Layout
 ------------------
+
+.. image:: _static/LAYOUT_LOOP_FILTER.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
 
 Bias Generator Layout
 ---------------------
 
+.. image:: _static/LAYOUT_BIAS_GEN.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 VCO Layout
 ----------
+
+.. image:: _static/LAYOUT_11STG_VCO.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
 
 Frequency Divider Layout
 ------------------------
 
-Integrated PLL Layout (without fillers)
+.. image:: _static/LAYOUT_3BIT_FREQ_DIV.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
+Integrated PLL Layout (without Fillers)
 ---------------------------------------
 
-Integrated PLL Layout (with fillers)
+.. image:: _static/LAYOUT_PLL_NO_FILLERS.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
+Integrated PLL Layout (with Fillers)
 ------------------------------------
+
+.. image:: _static/LAYOUT_PLL_WITH_FILLERS.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
 
 PLL Pinout
 ----------
+
+.. image:: _static/PLL_PINOUT.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
 
 Layout Information
 ------------------
