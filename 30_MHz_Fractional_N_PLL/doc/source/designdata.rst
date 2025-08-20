@@ -8,20 +8,20 @@ Architecture
 
 - **Feedback Divider (M):**  
   Divides the VCO output by a 3-bit integer input ``M``. This allows the PLL to lock the VCO frequency at an integer multiple of the reference input:  
-  :math:`f_{vco} = M \times f_{ref}`
+  :math:`f_vco = M x f_ref`
 
 - **Output Divider (N):**  
   Divides the VCO output by a 3-bit integer input ``N`` to produce the final output:  
-  :math:`f_{out} = \dfrac{f_{vco}}{N}`
+  :math:`f_out = f_vco / N`
 
 Frequency Relationship
 ----------------------
 
 By configuring **M** and **N** via six digital I/O control pads (3 bits each), the system achieves a fractional multiplication of the reference input:
 
-:math:`f_{out} = \left(\dfrac{M}{N}\right) \times f_{ref}`
+:math:`f_out = (M / N) x f_ref`
 
-Since both ``M`` and ``N`` can be varied between ``1`` and ``7``, the **theoretical frequency range** spans from ``1.428 MHz`` to ``70 MHz``, based on the 3-bit divider limits. However, due to VCO constraints, the **practical output frequency range** is limited to approximately ``1.428 MHz`` to ``30 MHz``. This design demonstrates a compact, digitally controlled fractional frequency synthesizer suitable for clock generation and frequency scaling applications.
+Since both ``M`` and ``N`` can be varied between ``1 and 7``, the **theoretical frequency range** spans from ``1.428 MHz to 70 MHz``, based on the 3-bit divider limits. However, due to VCO constraints, the **practical output frequency range** is limited to approximately ``1.428 MHz to 30 MHz``. This design demonstrates a compact, digitally controlled fractional frequency synthesizer suitable for clock generation and frequency scaling applications.
 
 Circuit Design
 ##############
@@ -136,7 +136,7 @@ Operation of the Charge Pump
 ----------------------------
 
 Frequency Divider Output Waveform for a Divider Ratio = 7
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------------
 
 Layout Design
 #############
@@ -180,11 +180,11 @@ Layout vs. Schematics (LVS) Results
 Post-layout Verification after PEX
 ##################################
 
-Simulation a division ratio of 1 (M = 1 and N = 1)
+Simulation of a Division Ratio of 1 (M = 1 and N = 1)
 --------------------------------------------------
 
-Simulation a division ratio of 1/7 (M = 1 and N = 7)
+Simulation of a Division Ratio of 1/7 (M = 1 and N = 7)
 ----------------------------------------------------
 
-Simulation a division ratio of 3 (M = 3 and N = 1)
+Simulation of a Division Ratio of 3 (M = 3 and N = 1)
 --------------------------------------------------
