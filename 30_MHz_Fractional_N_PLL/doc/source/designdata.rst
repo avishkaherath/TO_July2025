@@ -23,13 +23,6 @@ By configuring **M** and **N** via six digital I/O control pads (3 bits each), t
 
 Since both ``M`` and ``N`` can be varied between ``1 and 7``, the **theoretical frequency range** spans from ``1.428 MHz to 70 MHz``, based on the 3-bit divider limits. However, due to VCO constraints, the **practical output frequency range** is limited to approximately ``1.428 MHz to 30 MHz``. This design demonstrates a compact, digitally controlled fractional frequency synthesizer suitable for clock generation and frequency scaling applications.
 
-Original Project Repository
-###########################
-
-This project repository contains the only the important design files and simulation results for the 30 MHz Fractional-N PLL. All the information regarding the draft designs and simulations can be found at the original project repository.
-
-- Link - https://github.com/SkillSurf/cmos-pll-ihp-sg13g2
-
 Circuit Design
 ##############
 
@@ -133,7 +126,7 @@ Output Waveform of the VCO
 VCO Output Waveform at Control Voltage = 1V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/VCO_RANGE.png
+.. image:: _static/VCO_OUT_1V.png
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -141,7 +134,7 @@ VCO Output Waveform at Control Voltage = 1V
 VCO Output Frequency Spectrum at Control Voltage = 1V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: _static/VCO_OUT_SPECTRUM.png
+.. image:: _static/VCO_OUT_SPECTRUM_1V.png
     :align: center
     :alt: IHP Logo Image.
     :width: 800
@@ -315,6 +308,13 @@ Simulation of a Division Ratio of 3 (M = 3 and N = 1)
     :align: center
     :alt: IHP Logo Image.
     :width: 800
+
+Original Project Repository
+###########################
+
+This project repository contains the only the important design files and simulation results for the 30 MHz Fractional-N PLL. All the information regarding the draft designs and simulations can be found at the original project repository.
+
+- Link - https://github.com/SkillSurf/cmos-pll-ihp-sg13g2
 
 References
 ##################################
