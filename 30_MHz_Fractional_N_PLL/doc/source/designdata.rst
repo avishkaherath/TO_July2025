@@ -126,17 +126,42 @@ Output Waveform of the VCO
 VCO Output Waveform at Control Voltage = 1V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: _static/.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 VCO Output Frequency Spectrum at Control Voltage = 1V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: _static/.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
 
 VCO Oscillation Frequency vs Control Voltage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. image:: _static/.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 Operation of the Charge Pump
 ----------------------------
 
+.. image:: _static/.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 Frequency Divider Output Waveform for a Divider Ratio = 7
 ---------------------------------------------------------
+
+.. image:: _static/.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
 
 Layout Design
 #############
@@ -208,14 +233,30 @@ PLL Pinout
 Layout Information
 ------------------
 
+|           | Width (µm) | Height (µm) | Pitch (µm) | Area (µm²) |   Layers   |
+|-----------|------------|-------------|------------|------------|------------|
+| Layout    | 400        | 400         | -          | 160,000    |    all     |
+| Pads      | 60         | 60          | 75         | 3,600      |  TM2 -  M3 |
+| RF Pads   | 60         | 60          | 75         | ~2,984     |  TM2 - TM1 |
+
 Physical Verification (DRC, LVS)
 ################################
 
 Design Rule Check (DRC) Results
 -------------------------------
 
+.. image:: _static/DRC.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 Layout vs. Schematics (LVS) Results
 -----------------------------------
+
+.. image:: _static/LVS.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
 
 Post-layout Verification after PEX
 ##################################
@@ -223,8 +264,30 @@ Post-layout Verification after PEX
 Simulation of a Division Ratio of 1 (M = 1 and N = 1)
 --------------------------------------------------
 
+.. image:: _static/PEX_PLL_M1_N1.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 Simulation of a Division Ratio of 1/7 (M = 1 and N = 7)
 ----------------------------------------------------
 
+.. image:: _static/.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
 Simulation of a Division Ratio of 3 (M = 3 and N = 1)
 --------------------------------------------------
+
+.. image:: _static/.png
+    :align: center
+    :alt: IHP Logo Image.
+    :width: 800
+
+References
+##################################
+
+The following open-source PLL designs were referred to during the development of this project:
+- [tt08-tiny-pll](https://github.com/LegumeEmittingDiode/tt08-tiny-pll)
+- [avsdpll_1v8](https://github.com/lakshmi-sathi/avsdpll_1v8)
