@@ -233,11 +233,35 @@ PLL Pinout
 Layout Information
 ------------------
 
-|           | Width (µm) | Height (µm) | Pitch (µm) | Area (µm²) |   Layers   |
-|-----------|------------|-------------|------------|------------|------------|
-| Layout    | 400        | 400         | -          | 160,000    |    all     |
-| Pads      | 60         | 60          | 75         | 3,600      |  TM2 -  M3 |
-| RF Pads   | 60         | 60          | 75         | ~2,984     |  TM2 - TM1 |
+.. list-table:: 
+   :widths: 15 15 15 15 15 25
+   :header-rows: 1
+   :align: center
+
+   * - 
+     - Width (µm)
+     - Height (µm)
+     - Pitch (µm)
+     - Area (µm²)
+     - Layers
+   * - **Layout**
+     - 400
+     - 400
+     - -
+     - 160,000
+     - all
+   * - **Pads**
+     - 60
+     - 60
+     - 75
+     - 3,600
+     - TM2 - M3
+   * - **RF Pads**
+     - 60
+     - 60
+     - 75
+     - ~2,984
+     - TM2 - TM1
 
 Physical Verification (DRC, LVS)
 ################################
@@ -289,5 +313,6 @@ References
 ##################################
 
 The following open-source PLL designs were referred to during the development of this project:
+
 - [tt08-tiny-pll](https://github.com/LegumeEmittingDiode/tt08-tiny-pll)
 - [avsdpll_1v8](https://github.com/lakshmi-sathi/avsdpll_1v8)
