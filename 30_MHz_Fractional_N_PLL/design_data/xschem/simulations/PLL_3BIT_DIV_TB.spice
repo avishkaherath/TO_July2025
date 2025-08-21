@@ -26,7 +26,7 @@ x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 PLL_3BIT_DIV
 .control
 save v(x1.up) v(x1.dn) v(clk_in) v(clk_out) v(x1.vctrl)
 
-tran 1n 2u
+tran 0.1n 5u
 
 write TRAN_PLL_3BIT_DIV.raw
 .endc
@@ -52,7 +52,7 @@ write TRAN_PLL_3BIT_DIV.raw
 .ic V(VDD) = 1.2
 .ic V(x1.up) = 0
 .ic V(x1.dn) = 0
-.ic V(x1.vctrl) = 0.6
+.ic V(x1.vctrl) = 0.7
 
 
 **** end user architecture code

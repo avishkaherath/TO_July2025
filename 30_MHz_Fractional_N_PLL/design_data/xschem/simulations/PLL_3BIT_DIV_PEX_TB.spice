@@ -27,7 +27,7 @@ x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 PLL_3BIT_DIV_PEX
 save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl)
 save v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK) i(v1) v(vdd)
 
-tran 0.1n 6u
+tran 0.1n 2u
 write TRAN_PLL_3BIT_DIV_PEX_FTYP.raw
 .endc
 
@@ -80,7 +80,7 @@ RLEAK_0026 x1.m6_60810_42209# VSS 1e11
 
 .ic V(VSS) = 0
 .ic V(VDD) = 1.2
-.ic V(x1.vco_wob_0.vctl) = 0.6
+.ic V(x1.vco_wob_0.vctl) = 0.7
 *.ic V(x1.3bit_freq_divider_1.dff_nclk_0.nCLK) = 1.2
 *.ic V(x1.3bit_freq_divider_0.dff_nclk_0.nCLK) = 1.2
 

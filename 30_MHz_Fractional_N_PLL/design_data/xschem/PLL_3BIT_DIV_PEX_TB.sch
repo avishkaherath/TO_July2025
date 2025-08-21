@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 590 -880 1390 -480 {flags=graph
-y1=1.1
+y1=-0.0038
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -60 1390 340 {flags=graph
-y1=4.4e-05
-y2=1.3
+y1=0
+y2=0.01
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,15 +47,15 @@ logx=0
 logy=0
 }
 B 2 -1840 -880 -1040 -480 {flags=graph
-y1=-0.0024
-y2=0.00044
+y1=-0.012
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ logx=0
 logy=0
 }
 B 2 -1030 -880 -230 -480 {flags=graph
-y1=-0.013
+y1=-0.007
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -96,8 +96,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -110,15 +110,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -470 1390 -70 {flags=graph
-y1=0.58
-y2=0.6
+y1=0.7
+y2=0.73
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -131,15 +131,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -220 -60 580 340 {flags=graph
-y1=1.1
+y1=-0.012
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -153,14 +153,14 @@ logy=0
 }
 B 2 -220 -470 580 -70 {flags=graph
 y1=1.8e-06
-y2=0.00077
+y2=0.0012
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1e-07
+x1=3.4145246e-07
+x2=8.4476895e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -219,8 +219,8 @@ value="
 save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl)
 save v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK) i(v1) v(vdd)
 
-tran 0.1n 6u
-write TRAN_PLL_3BIT_DIV_PEX_FTYP.raw
+tran 0.1n 2u
+write TRAN_PLL_3BIT_DIV_PEX.raw
 .endc
 "}
 C {launcher.sym} -443 161 0 0 {name=h5

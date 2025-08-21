@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=5.4e-08
+y1=-0.023
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=9.3433624e-07
+x1=1.0910723e-06
+x2=1.9260141e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -80 -20 720 380 {flags=graph
-y1=0.59
-y2=0.7
+y1=0.69
+y2=0.75
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=9.3433624e-07
+x1=1.0910723e-06
+x2=1.9260141e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,15 +47,15 @@ logx=0
 logy=0
 }
 B 2 -1860 -880 -1060 -480 {flags=graph
-y1=-0.01
+y1=-0.015
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=9.3433624e-07
+x1=1.0910723e-06
+x2=1.9260141e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ logx=0
 logy=0
 }
 B 2 -1000 -880 -200 -480 {flags=graph
-y1=-0.0006
-y2=0.00043
+y1=-0.011
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=9.3433624e-07
+x1=1.0910723e-06
+x2=1.9260141e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -96,8 +96,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=9.3433624e-07
+x1=1.0910723e-06
+x2=1.9260141e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -155,7 +155,7 @@ value="
 .control
 save v(x1.up) v(x1.dn) v(clk_in) v(clk_out) v(x1.vctrl)
  
-tran 1n 2u
+tran 0.1n 5u
 
 write TRAN_PLL_3BIT_DIV.raw
 .endc
@@ -219,5 +219,5 @@ C {code.sym} -670 -30 0 0 {name=NODESET only_toplevel=false value=
 .ic V(VDD) = 1.2
 .ic V(x1.up) = 0
 .ic V(x1.dn) = 0
-.ic V(x1.vctrl) = 0.6
+.ic V(x1.vctrl) = 0.7
 "}
