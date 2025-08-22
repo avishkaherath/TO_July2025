@@ -186,8 +186,8 @@ Since the pulse width of the ``up`` signal is wider than that of the ``down`` si
 Frequency Divider Output Waveform for a Divider Ratio = 7
 ---------------------------------------------------------
 
-Input frequency - 80 MHz
-Output frequency - 5.71 MHz
+- Input frequency - 80 MHz
+- Output frequency - 5.71 MHz
 
 .. image:: _static/3BIT_FREQ_DIV_OUT.png
     :align: center
@@ -197,7 +197,7 @@ Output frequency - 5.71 MHz
 Integrated PLL Simulation for M = 1 and N = 1
 ---------------------------------------------
 
-Output frequency - 10.02 MHz
+- Output frequency - 10.02 MHz
 
 .. image:: _static/PLL_M1_N1.png
     :align: center
@@ -210,7 +210,7 @@ Layout Design
 Charge Pump Layout
 ------------------
 
-Area: 26.03 µm²
+- Area: 26.03 µm²
 
 .. image:: _static/LAYOUT_CHRG_PUMP.png
     :align: center
@@ -220,7 +220,7 @@ Area: 26.03 µm²
 Loop Filter Layout
 ------------------
 
-Area: 297.89 µm²
+- Area: 297.89 µm²
 
 .. image:: _static/LAYOUT_LOOP_FILTER.png
     :align: center
@@ -230,7 +230,7 @@ Area: 297.89 µm²
 Bias Generator Layout
 ---------------------
 
-Area: 354.17 µm²
+- Area: 354.17 µm²
 
 .. image:: _static/LAYOUT_BIAS_GEN.png
     :align: center
@@ -240,7 +240,7 @@ Area: 354.17 µm²
 VCO Layout
 ----------
 
-Area: 2246.58 µm²
+- Area: 2246.58 µm²
 
 .. image:: _static/LAYOUT_11STG_VCO.png
     :align: center
@@ -250,7 +250,7 @@ Area: 2246.58 µm²
 Frequency Divider Layout
 ------------------------
 
-Area: 715.22 µm²
+- Area: 715.22 µm²
 
 .. image:: _static/LAYOUT_3BIT_FREQ_DIV.png
     :align: center
@@ -268,7 +268,7 @@ Integrated PLL Layout (without Fillers)
 Integrated PLL Layout (with Fillers)
 ------------------------------------
 
-Area: 160000.00 µm²
+- Area: 160000.00 µm²
 
 .. image:: _static/LAYOUT_PLL_WITH_FILLERS.png
     :align: center
@@ -341,7 +341,7 @@ Post-layout Verification after PEX
 Simulation of a Division Ratio of 1 (M = 1 and N = 1)
 --------------------------------------------------
 
-Output frequency - 8.03 MHz
+- Output frequency - 8.03 MHz
 
 .. image:: _static/PEX_PLL_M1_N1.png
     :align: center
@@ -351,7 +351,7 @@ Output frequency - 8.03 MHz
 Simulation of a Division Ratio of 1/7 (M = 1 and N = 7)
 ----------------------------------------------------
 
-Output frequency - 1.43 MHz
+- Output frequency - 1.43 MHz
 
 .. image:: _static/PEX_PLL_M1_N7.png
     :align: center
@@ -361,7 +361,7 @@ Output frequency - 1.43 MHz
 Simulation of a Division Ratio of 3 (M = 3 and N = 1)
 --------------------------------------------------
 
-Output frequency - 27.71 MHz
+- Output frequency - 27.71 MHz
 
 .. image:: _static/PEX_PLL_M3_N1.png
     :align: center
@@ -380,5 +380,5 @@ References
 
 The following open-source PLL designs were referred to during the development of this project:
 
-[1] tt08-tiny-pll - https://github.com/LegumeEmittingDiode/tt08-tiny-pll
-[2] avsdpll_1v8 - https://github.com/lakshmi-sathi/avsdpll_1v8
+| [1] tt08-tiny-pll - https://github.com/LegumeEmittingDiode/tt08-tiny-pll
+| [2] avsdpll_1v8 - https://github.com/lakshmi-sathi/avsdpll_1v8
