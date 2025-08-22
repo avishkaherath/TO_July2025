@@ -198,7 +198,7 @@ Frequency Divider Output Waveform for a Divider Ratio = 7
     :alt: CIRCUIT_3BIT_FREQ_DIV_OUT
     :width: 800
 
-Integrated PLL Simulation for M = 1 and N = 1
+Integrated PLL Simulation for M = 1 and N = 1 (Multiplication Factor = 1)
 ---------------------------------------------
 
 - Output frequency - 10.02 MHz
@@ -342,7 +342,7 @@ Layout vs. Schematics (LVS) Results
 Post-layout Verification after PEX
 ##################################
 
-Simulation of a Division Ratio of 1 (M = 1 and N = 1)
+Simulation for a Multiplier Ratio of 1 (M = 1 and N = 1)
 --------------------------------------------------
 
 - Output frequency - 8.03 MHz
@@ -352,7 +352,7 @@ Simulation of a Division Ratio of 1 (M = 1 and N = 1)
     :alt: PEX_PLL_M1_N1
     :width: 800
 
-Simulation of a Division Ratio of 1/7 (M = 1 and N = 7)
+Simulation for a Multiplier Ratio of 1/7 (M = 1 and N = 7)
 ----------------------------------------------------
 
 - Output frequency - 1.43 MHz
@@ -362,7 +362,7 @@ Simulation of a Division Ratio of 1/7 (M = 1 and N = 7)
     :alt: PEX_PLL_M1_N7
     :width: 800
 
-Simulation of a Division Ratio of 3 (M = 3 and N = 1)
+Simulation for a Multiplier Ratio of 3 (M = 3 and N = 1)
 --------------------------------------------------
 
 - Output frequency - 27.71 MHz
