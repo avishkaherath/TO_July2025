@@ -1,7 +1,7 @@
 30 MHz Fractional-N PLL Design Data and Design Process Description
 ##################################################################
 
-The design is primarily implements a charge-pump (CP) based **Type-II Phase-Locked Loop (PLL)** designed to generate programmable output frequencies from a stable ``10 MHz`` reference input. The architecture uses a Voltage-Controlled Oscillator (VCO) together with two 3-bit programmable Frequency Dividers (FDs) to achieve a tunable output frequency.
+This project primarily implements a charge-pump (CP) based **Type-II Phase-Locked Loop (PLL)** designed to generate programmable output frequencies from a stable ``10 MHz`` reference input. The architecture uses a Voltage-Controlled Oscillator (VCO) together with two 3-bit programmable Frequency Dividers (FDs) to achieve a tunable output frequency.
 
 Architecture
 ------------
@@ -36,7 +36,7 @@ The top-level schematic of ``PLL_3BIT_DIV`` is shown below:
     :alt: CIRCUIT_PLL_3BIT_DIV
     :width: 800
 
-The PLL uses a standard fractional-N architecture, where a feedback and output frequency divider are used to set the frequency multiplication with respect to the reference clock input.
+The PLL uses a standard fractional-N architecture, where a feedback and output frequency dividers are used to set the frequency multiplication with respect to the reference clock input.
 
 Phase-Frequency Detector (PFD)
 ------------------------------
@@ -45,6 +45,8 @@ Phase-Frequency Detector (PFD)
     :align: center
     :alt: CIRCUIT_PFD
     :width: 800
+
+The phase-frequency detector compares the phase of the input reference clock ``ref_clk`` with that of the VCO output ``vco_clk``. It generates two control signals, ``up`` and ``down``, which drive the charge pump to adjust the VCO's control voltage.
 
 Charge Pump (CP)
 ----------------
@@ -59,6 +61,8 @@ The charge pump uses two current sources (``bias_p`` and ``bias_n``), which are 
 Loop Filter
 -----------
 
+The loop filter is used to filter out the high frequency variations in the charge pump output and provide a stable control voltage to the VCO.
+
 .. image:: _static/CIRCUIT_LOOP_FILTER.png
     :align: center
     :alt: CIRCUIT_LOOP_FILTER
@@ -67,7 +71,7 @@ Loop Filter
 Bias Generator
 --------------
 
-The bias generator design in this project is based on [1], but we added an extra resistor to increase ``bias_n`` value. The bias generator is a self-biased current mirror, which provides a roughly supply-independent current for the charge pump. A startup circuit is included to ensure the bias generator does not fall into an undesirable operating point where ``I_OUT = 0``. The diode devices ``M3`` and ``M7`` charge the ``kick`` node to ``VPWR`` when the circuit is enabled, which pulls ``bias_p`` low and establishes a current in the mirror devices. Once the mirror is active, ``M3`` pulls ``kick`` low and disables the startup circuit.
+The bias generator design in this project is based on `tt08-tiny-pll <https://github.com/LegumeEmittingDiode/tt08-tiny-pll>`__, but we added an extra resistor to increase ``bias_n`` value. The bias generator is a self-biased current mirror, which provides a roughly supply-independent current for the charge pump. A startup circuit is included to ensure the bias generator does not fall into an undesirable operating point where ``I_OUT = 0``. The diode devices ``M3`` and ``M7`` charge the ``kick`` node to ``VPWR`` when the circuit is enabled, which pulls ``bias_p`` low and establishes a current in the mirror devices. Once the mirror is active, ``M3`` pulls ``kick`` low and disables the startup circuit.
 
 .. image:: _static/CIRCUIT_BIAS_GEN.png
     :align: center
@@ -90,7 +94,7 @@ Inverter for VCO
 11-Stage Ring VCO
 ~~~~~~~~~~~~~~~~~
 
-A control transistor operating in the triode region regulates the current supplied to the inverter chain, enabling smooth tuning of the oscillation frequency. Minimum channel-length devices are used to maximize the width-to-length ratio, reduce ``V_DSAT``, and minimize parasitic capacitances.
+A control transistor operating in the triode region regulates the current supplied to the inverter chain, enabling smooth tuning of the oscillation frequency. Minimum channel-length devices are used to maximize the W/L ratio, reduce ``V_DSAT``, and minimize parasitic capacitances.
 
 .. image:: _static/CIRCUIT_11STG_VCO.png
     :align: center
@@ -102,7 +106,7 @@ Low-threshold (LVT) NMOS devices are employed so that the control voltage operat
 Frequency Divider (FD)
 ----------------------
 
-A frequency divider is implemented using a 3-bit binary counter, followed by 3 XOR gates to compare the counter output with the division ratio input ``A[2..0]``. When the counter output is equal to ``BIT``, ``DIV_RST`` is immediately triggered, which resets the counter to 0 at the rising edge of ``CLK_IN``. As a result, the maximum division ratio from ``CLK_IN`` to ``DIV_RST`` is 7, when ``BIT == 3'b111``.
+A frequency divider is implemented using a 3-bit binary counter, followed by three XOR gates to compare the counter output with the division ratio input ``A[2..0]``. When the counter output is equal to ``BIT``, ``DIV_RST`` is immediately triggered, which resets the counter to 0 at the rising edge of ``CLK_IN``. As a result, the maximum division ratio from ``CLK_IN`` to ``DIV_RST`` is 7, when ``BIT == 3'b111``.
 
 .. image:: _static/CIRCUIT_3BIT_FREQ_DIV.png
     :align: center
@@ -153,7 +157,7 @@ VCO Output Waveform at Control Voltage = 1 V
     :alt: CIRCUIT_VCO_OUT_1V
     :width: 800
 
-The output Frequency of the VCO at a control voltage of 1 V is approximately ``50 MHz`.
+The output Frequency of the VCO at a control voltage of 1 V is approximately ``50 MHz``.
 
 VCO Output Frequency Spectrum at Control Voltage = 1 V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -380,5 +384,5 @@ References
 
 The following open-source PLL designs were referred to during the development of this project:
 
-| [1] tt08-tiny-pll - https://github.com/LegumeEmittingDiode/tt08-tiny-pll
-| [2] avsdpll_1v8 - https://github.com/lakshmi-sathi/avsdpll_1v8
+- tt08-tiny-pll - https://github.com/LegumeEmittingDiode/tt08-tiny-pll
+- avsdpll_1v8 - https://github.com/lakshmi-sathi/avsdpll_1v8
