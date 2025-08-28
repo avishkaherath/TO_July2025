@@ -5,7 +5,7 @@
   "Design": {
     "DesignName": "FMD_QNC_30_MHz_Fractional_N_PLL",
     "FinalGdsName": "FMD_QNC_PLL_3BIT_DIV.gds",
-    "TopCellName": "FMD_QNC_pll_3bitDiv",
+    "TopCellName": "FMD_QNC_PLL_3BIT_DIV",
     "Width": "0.4mm",
     "Height": "0.4mm",
     "NumberOfSamples": "10"
