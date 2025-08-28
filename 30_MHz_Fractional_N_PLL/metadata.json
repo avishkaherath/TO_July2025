@@ -4,7 +4,7 @@
   "Technology": "SG13G2",
   "Design": {
     "DesignName": "FMD_QNC_PLL_3BIT_DIV",
-    "FinalGdsName": "FMD_QNC_PLL_3BIT_DIV.gds",
+    "FinalGdsName": "FMD_QNC_pll_3bitDiv.gds",
     "TopCellName": "FMD_QNC_pll_3bitDiv",
     "Width": "0.4mm",
     "Height": "0.4mm",
