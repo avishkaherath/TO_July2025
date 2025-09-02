@@ -6,8 +6,8 @@
     "DesignName": "FMD_QNC_30_MHz_Fractional_N_PLL",
     "FinalGdsName": "FMD_QNC_PLL_3BIT_DIV.gds",
     "TopCellName": "FMD_QNC_PLL_3BIT_DIV",
-    "Width": "0.4mm",
-    "Height": "0.4mm",
+    "Width": "0.44mm",
+    "Height": "0.44mm",
     "NumberOfSamples": "10"
   },
   "FinalWaferThickness": "200um"
